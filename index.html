@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Poduke iz matematike i srodnih područja — Demo stranica</title>
-  <meta name="description" content="Poduke iz matematike i srodnih područja za osnovne i srednje škole te fakultet — pripreme za ispite, natjecanja, popravne ispite i kolokvije." />
+  <meta name="description" content="Poduke iz matematike i srodnih područja za osnovne i srednje škole te fakultet — pripreme za ispite, maturu, natjecanja, kolokvije, popravne ispite." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -25,14 +25,15 @@
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:700}
     .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
-    .nav a{opacity:.9}
+    .nav a{opacity:.9;cursor:pointer}
     .menu{display:flex;gap:18px;align-items:center}
     .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1024;font-weight:700;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(34,211,238,.25)}
+    .btn-link{display:inline-flex;align-items:center;justify-content:center;padding:6px 14px;border-radius:12px;color:var(--text);font-weight:700;cursor:pointer}
     .hero{padding:80px 0 40px}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
     h1{font-size:clamp(34px,6vw,54px);line-height:1.05;margin:.3em 0 .4em}
     .lead{font-size:clamp(16px,2.6vw,20px);color:#cbd5e1}
-    .hero-card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .hero-card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);margin-bottom:20px}
     section{padding:58px 0;border-top:1px solid rgba(255,255,255,.06)}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
@@ -41,7 +42,12 @@
     .price{font-size:36px;font-weight:800;margin:.2em 0}
     .muted{color:#94a3b8}
     footer{padding:40px 0;color:#94a3b8}
+    details{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:16px;margin-bottom:10px;box-shadow:var(--shadow)}
+    summary{cursor:pointer;font-weight:600}
     @media (max-width:900px){.hero-grid{grid-template-columns:1fr}.grid-3,.pricing{grid-template-columns:1fr}}
+      html{scroll-behavior:smooth}
+    section{scroll-margin-top:90px}
+    #kontakt{scroll-margin-top:90px}
   </style>
 </head>
 <body>
@@ -50,8 +56,9 @@
       <div class="brand"><div class="logo"></div> <span>Poduke iz matematike i srodnih područja</span></div>
       <nav class="menu">
         <a href="#predmeti">Poduke</a>
+        <a href="#faq">Česta pitanja</a>
         <a href="#cijene">Cijene</a>
-        <a href="#kontakt" class="btn">Rezerviraj termin</a>
+        <a href="#kontakt" class="btn">Zatraži termin</a>
       </nav>
     </div>
   </header>
@@ -63,13 +70,28 @@
           <h1>Poduke iz matematike i srodnih područja — za osnovnu i srednju školu te fakultet</h1>
           <p class="lead">Pripreme za ispite, natjecanja, popravne ispite i kolokvije. Individualni pristup svakom učeniku uz jasna i strpljiva objašnjenja.</p>
           <div style="margin-top:20px">
-            <a href="#kontakt" class="btn">Zakaži termin</a>
+            <a href="#kontakt" class="btn">Zatraži termin</a>
           </div>
         </div>
-        <aside class="hero-card">
+        <div>
+          <div class="hero-card">
+            <h3>Što dobivaš na svakom satu</h3>
+            <ul style="list-style:none;padding:0;margin:0;line-height:1.8">
+              <li>✔ Jasna objašnjenja i korak‑po‑korak rješenja</li>
+              <li>✔ Praćenje napretka i plan učenja</li>
+              <li>✔ Materijali i zadaci nakon sata</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="o-meni">
+      <div class="container">
+        <div class="hero-card">
           <h3>O meni</h3>
-          <p>Diplomirani sam profesor matematike i informatike s iskustvom rada u osnovnim i srednjim školama. Cilj mi je pomoći učenicima da razumiju gradivo i steknu samopouzdanje.</p>
-        </aside>
+          <p>Magistar edukacije matematike i informatike s iskustvom rada u osnovnim i srednjim školama. Pomažem učenicima razumjeti gradivo, razviti logičko razmišljanje i steći samopouzdanje. Nastojim prilagoditi pristup svakom učeniku i stvoriti ugodnu atmosferu za učenje.</p>
+        </div>
       </div>
     </section>
 
@@ -81,6 +103,20 @@
           <div class="card"><h3>Ispiti i kolokviji</h3><p>Pripreme za ispite, natjecanja, popravne ispite, državnu maturu, kolokvije.</p></div>
           <div class="card"><h3>Individualni pristup</h3><p>Svakom učeniku prilagođen plan rada i dodatni zadatci za vježbu.</p></div>
         </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <h2>Česta pitanja</h2>
+        <details>
+          <summary>Mogu li dobiti probni sat?</summary>
+          <p>Da — kratki probni termin je besplatan. Dogovori ga kroz obrazac u nastavku.</p>
+        </details>
+        <details>
+          <summary>Kako otkazati ili pomaknuti termin?</summary>
+          <p>Potrebno je javiti najmanje 24h ranije. U protivnom se sat računa kao održan.</p>
+        </details>
       </div>
     </section>
 
@@ -111,7 +147,7 @@
       <div class="container">
         <h2>Kontakt</h2>
         <div class="card" style="max-width:720px">
-          <form action="#" method="post" onsubmit="alert('Demo: ovdje poveži servis za forme.'); return false;">
+          <form id="kontakt-form" action="#" method="post" onsubmit="alert('Demo: ovdje poveži servis za forme.'); return false;">
             <label>Ime
               <input required type="text" placeholder="Ime" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0b1024;color:var(--text)" />
             </label>
@@ -138,6 +174,8 @@
     </div>
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
