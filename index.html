@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poduke iz matematike i srodnih područja — Demo stranica</title>
+  <meta name="description" content="Poduke iz matematike i srodnih područja za osnovne i srednje škole te fakultet — pripreme za ispite, natjecanja, popravne ispite i kolokvije." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#111827;
+      --muted:#334155;
+      --text:#e5e7eb;
+      --accent:#22d3ee;
+      --accent-2:#a78bfa;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1024, #0f172a);color:var(--text);margin:0}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:40;background:rgba(15,23,42,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+    .nav a{opacity:.9}
+    .menu{display:flex;gap:18px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1024;font-weight:700;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(34,211,238,.25)}
+    .hero{padding:80px 0 40px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+    h1{font-size:clamp(34px,6vw,54px);line-height:1.05;margin:.3em 0 .4em}
+    .lead{font-size:clamp(16px,2.6vw,20px);color:#cbd5e1}
+    .hero-card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    section{padding:58px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 .35em}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .price{font-size:36px;font-weight:800;margin:.2em 0}
+    .muted{color:#94a3b8}
+    footer{padding:40px 0;color:#94a3b8}
+    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}.grid-3,.pricing{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo"></div> <span>Poduke iz matematike i srodnih područja</span></div>
+      <nav class="menu">
+        <a href="#predmeti">Poduke</a>
+        <a href="#cijene">Cijene</a>
+        <a href="#kontakt" class="btn">Rezerviraj termin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Poduke iz matematike i srodnih područja — za osnovnu i srednju školu te fakultet</h1>
+          <p class="lead">Pripreme za ispite, natjecanja, popravne ispite i kolokvije. Individualni pristup svakom učeniku uz jasna i strpljiva objašnjenja.</p>
+          <div style="margin-top:20px">
+            <a href="#kontakt" class="btn">Zakaži termin</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h3>O meni</h3>
+          <p>Diplomirani sam profesor matematike s iskustvom rada u osnovnim i srednjim školama. Podučavanje mi je strast, a cilj mi je pomoći učenicima da razumiju gradivo i steknu samopouzdanje.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="predmeti">
+      <div class="container">
+        <h2>Što nudim</h2>
+        <div class="grid-3" style="margin-top:18px">
+          <div class="card"><h3>Matematika i srodna područja</h3><p>Poduke za osnovnu i srednju školu te fakultet — sve razine i pripreme za natjecanja.</p></div>
+          <div class="card"><h3>Ispiti i kolokviji</h3><p>Pripreme za popravne ispite, državnu maturu i fakultetske kolokvije.</p></div>
+          <div class="card"><h3>Individualni pristup</h3><p>Svakom učeniku prilagođen plan rada i dodatni zadaci za vježbu.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cijene">
+      <div class="container">
+        <h2>Cjenik</h2>
+        <div class="pricing" style="margin-top:18px">
+          <div class="card">
+            <h3>Pojedinačni sat</h3>
+            <div class="price">€20</div>
+            <p class="muted">60 min · uživo</p>
+          </div>
+          <div class="card" style="border:2px solid var(--accent);">
+            <h3>Paket 5 sati</h3>
+            <div class="price">€90</div>
+            <p class="muted">ušteda 10% · fleksibilni termini</p>
+          </div>
+          <div class="card">
+            <h3>Pripreme za ispite</h3>
+            <div class="price">po dogovoru</div>
+            <p class="muted">ovisno o trajanju i intenzitetu</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <div class="card" style="max-width:720px">
+          <form action="#" method="post" onsubmit="alert('Demo: ovdje poveži servis za forme.'); return false;">
+            <label>Ime
+              <input required type="text" placeholder="Ime" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0b1024;color:var(--text)" />
+            </label>
+            <label style="display:block;margin-top:12px">E-mail
+              <input required type="email" placeholder="test@example.com" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0b1024;color:var(--text)" />
+            </label>
+            <label style="display:block;margin-top:12px">Poruka
+              <textarea rows="5" placeholder="Napiši upit..." style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0b1024;color:var(--text)"></textarea>
+            </label>
+            <div style="display:flex;gap:12px;align-items:center;margin-top:14px">
+              <button class="btn" type="submit">Pošalji upit</button>
+              <span class="muted">Demo · nema stvarnog slanja</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© <span id="y"></span> Poduke iz matematike i srodnih područja</div>
+      <div class="muted">Demo stranica na GitHub Pages</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
