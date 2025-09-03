@@ -8,18 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Zoho forma – responzivna visina bez internog scrolla */
-.form-embed {
-  width: 100%;
-  border: none;
-  height: 1100px;          /* desktop default */
-}
 
-@media (max-width: 900px) {
-  .form-embed {
-    height: 1400px;        /* mobitel – malo više jer su polja viša */
-  }
-}
     :root{
       --bg:#0f172a;
       --card:#111827;
@@ -60,6 +49,18 @@
       html{scroll-behavior:smooth}
     section{scroll-margin-top:90px}
     #kontakt{scroll-margin-top:90px}
+        /* Zoho forma – responzivna visina bez internog scrolla */
+.form-embed {
+  width: 100%;
+  border: none;
+  height: 1100px;          /* desktop default */
+}
+
+@media (max-width: 900px) {
+  .form-embed {
+    height: 1400px;        /* mobitel – malo više jer su polja viša */
+  }
+}
   </style>
 </head>
 <body>
