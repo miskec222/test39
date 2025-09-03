@@ -125,4 +125,71 @@
           <div class="card"><h3>Matematika i srodna područja</h3><p>Poduke za osnovnu i srednju školu te fakultet — sve razine.</p></div>
           <div class="card"><h3>Ispiti i kolokviji</h3><p>Pripreme za ispite, natjecanja, popravne ispite, državnu maturu, kolokvije.</p></div>
           <div class="card"><h3>Individualni pristup</h3><p>Svakom učeniku prilagođen plan rada i dodatni zadatci za vježbu.</p></div>
-        </d
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <h2>Česta pitanja</h2>
+        <details>
+          <summary>Mogu li dobiti probni sat?</summary>
+          <p>Da — kratki probni termin je besplatan. Dogovori ga kroz obrazac u nastavku.</p>
+        </details>
+        <details>
+          <summary>Kako otkazati ili pomaknuti termin?</summary>
+          <p>Potrebno je javiti najmanje 24h ranije. U protivnom se sat računa kao održan.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="cijene">
+      <div class="container">
+        <h2>Cjenik</h2>
+        <div class="pricing" style="margin-top:18px">
+          <div class="card">
+            <h3>Pojedinačni sat</h3>
+            <div class="price">€20</div>
+            <p class="muted">60 min · uživo</p>
+          </div>
+          <div class="card" style="border:2px solid var(--accent);">
+            <h3>Paket 5 sati</h3>
+            <div class="price">€90</div>
+            <p class="muted">ušteda 10% · fleksibilni termini</p>
+          </div>
+          <div class="card">
+            <h3>Pripreme za ispite</h3>
+            <div class="price">po dogovoru</div>
+            <p class="muted">ovisno o trajanju i intenzitetu</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <iframe
+          class="form-frame"
+          title="Matbeat kontakt"
+          src="https://forms.zohopublic.eu/infomat1/form/Matbeatkontakt/formperma/5hTqqJ7yI3jLD4Sr0QS4MVm4uvMMwW3IcQ045rs41LM"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          scrolling="no">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© <span id="y"></span> Poduke iz matematike i srodnih područja</div>
+      <div class="muted">Demo stranica na GitHub Pages</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
