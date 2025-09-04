@@ -24,12 +24,12 @@
     img, iframe{max-width:100%}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
     header{position:sticky;top:0;z-index:40;background:rgba(15,23,42,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;flex:1 1 auto}
     .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
-    .nav a{opacity:.9;cursor:pointer}
-    .menu{display:flex;gap:18px;align-items:center}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1024;font-weight:700;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(34,211,238,.25)}
+    .nav a{opacity:.9;cursor:pointer;white-space:nowrap}
+    .menu{display:flex;gap:12px;align-items:center;flex:1 1 auto;justify-content:flex-end;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1024;font-weight:700;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(34,211,238,.25)}
     .btn-link{display:inline-flex;align-items:center;justify-content:center;padding:6px 14px;border-radius:12px;color:var(--text);font-weight:700;cursor:pointer}
     .hero{padding:80px 0 40px}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
@@ -50,6 +50,8 @@
     @media (max-width:900px){
       .hero-grid{grid-template-columns:1fr}
       .grid-3,.pricing{grid-template-columns:1fr}
+      .menu{gap:8px}
+      .btn{padding:6px 10px;font-size:14px}
     }
 
     section{scroll-margin-top:90px}
