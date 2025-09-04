@@ -17,11 +17,6 @@
       --accent-2:#a78bfa;
       --radius:18px;
       --shadow:0 10px 30px rgba(0,0,0,.35);
-
-      /* visine Zoho forme - smanjene */
-      --form-h-desktop: 900px;
-      --form-h-tablet:  1000px;
-      --form-h-mobile:  1200px;
     }
     html{scroll-behavior:smooth}
     body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1024, #0f172a);color:var(--text);margin:0;overflow-x:hidden}
@@ -60,22 +55,16 @@
     section{scroll-margin-top:90px}
     #kontakt{scroll-margin-top:90px}
 
-    /* iframe forma */
+    /* iframe forma - fiksna visina */
     .form-frame{
       width: 100%;
-      height: var(--form-h-desktop);
+      height: 900px; /* malo skraćena visina forme */
       max-width: 100%;
       border: none;
       display: block;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       background: transparent;
-    }
-    @media (max-width: 1024px){
-      .form-frame{ height: var(--form-h-tablet); }
-    }
-    @media (max-width: 640px){
-      .form-frame{ height: var(--form-h-mobile); }
     }
   </style>
 </head>
